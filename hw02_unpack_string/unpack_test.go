@@ -18,7 +18,7 @@ func TestUnpack(t *testing.T) {
 		{input: "aaa0b", expected: "aab"},
 		{input: "d\n5abc", expected: "d\n\n\n\n\nabc"},
 
-		// there is an additional test checking if a digit is in the end of line (to check line 34)
+		// there is an additional test checking if a digit is in the end of input string (to check line 34)
 		{input: "abc5", expected: "abccccc"},
 		{input: "a1b1", expected: "ab"},
 
