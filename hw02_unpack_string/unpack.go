@@ -30,7 +30,7 @@ func Unpack(input string) (string, error) {
 		}
 		b.WriteRune(current)
 	}
-	if inputLen > 0 {
+	if inputLen > 0 && !unicode.IsDigit(rune(input[len(input)-1])) {
 		b.WriteByte(input[len(input)-1])
 	}
 	return b.String(), nil
